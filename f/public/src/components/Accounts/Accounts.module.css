@@ -1,0 +1,216 @@
+/* Base styles for the main container */
+.accounts-container {
+    padding: 45px 60px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f5f7, #e0e7f1);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    color: rgb(0, 61, 148);
+    overflow-y: auto;
+    height: 100vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Form container styling */
+  .form-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Form title */
+  .form-title {
+    font-size: 32px;
+    color: #003d94;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  /* Input row layout */
+  .input-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Input group styling */
+  .input-group {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Label styling */
+  .input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Required field asterisk */
+  .required {
+    color: red;
+  }
+  
+  /* Input field styling */
+  .input-group input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Button row layout */
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  /* Save button styling */
+  .save-button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 48%;
+    background-color: #003d94;
+    color: white;
+    border: none;
+  }
+  
+  /* Clear button styling */
+  .clear-button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 48%;
+    background-color: #f1f1f1;
+    color: white;
+    border: 1px solid #ddd;
+  }
+  
+  /* Customer list container styling */
+  .customer-list-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Customer list title */
+  .list-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Table container for scrollable area */
+  .table-container {
+    width: 100%;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Table header cells */
+  table th {
+    padding: 14px;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    border-bottom: 2px solid #ddd;
+    background-color: rgb(0, 61, 148);
+    text-transform: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  /* Table data cells */
+  table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* -------------------------------------
+     Responsive Styles
+  ------------------------------------- */
+  
+  /* Mobile devices */
+  @media only screen and (max-width: 767px) {
+    .accounts-container {
+      padding: 20px;
+    }
+    .form-container {
+      padding: 20px;
+      max-width: 100%;
+    }
+    .input-row {
+      flex-direction: column;
+    }
+    .button-row {
+      flex-direction: column;
+    }
+    .save-button,
+    .clear-button {
+      width: 100%;
+    }
+    .customer-list-container {
+      padding: 20px;
+      max-width: 100%;
+    }
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .accounts-container {
+      padding: 30px;
+    }
+    .form-container {
+      padding: 30px;
+    }
+    .customer-list-container {
+      padding: 25px;
+    }
+  }
+  

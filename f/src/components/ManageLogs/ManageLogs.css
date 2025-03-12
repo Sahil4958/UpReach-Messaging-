@@ -1,0 +1,300 @@
+/* Overall Page Container */
+.manage-logs-container {
+  padding: 30px;
+  background: linear-gradient(135deg, #f3f4f7, #ffffff);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 1400px;
+  margin: 50px auto;
+  font-family: "Arial", sans-serif;
+}
+
+/* Title Styling */
+.manage-logs-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Bar Container */
+.manage-logs-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Search Input Styling */
+.manage-logs-search-input {
+  width: 60%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.manage-logs-search-input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Table Styling */
+.manage-logs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: block; /* Ensures max-height applies */
+  max-height: calc(9 * 50px + 40px); /* 5 rows * row height + header */
+}
+
+.manage-logs-table thead {
+  position: sticky;
+  top: 0;
+  background: #007bff; /* Ensure background color remains */
+  z-index: 10;
+}
+
+.manage-logs-header-row {
+  background: #007bff;
+  color: #fff;
+}
+
+.manage-logs-header-cell {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+.manage-logs-cell {
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.manage-logs-row {
+  transition: all 0.3s ease;
+}
+
+.manage-logs-row:hover {
+  background-color: #f9faff;
+}
+
+/* No Results Row */
+.manage-logs-no-results-row {
+  background: #fefefe;
+}
+
+.manage-logs-no-results-cell {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .manage-logs-search-input {
+    width: 90%;
+  }
+
+  .manage-logs-title {
+    font-size: 24px;
+  }
+
+  .manage-logs-cell,
+  .manage-logs-header-cell {
+    font-size: 12px;
+  }
+}
+
+/* Pagination container */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Pagination button */
+.pagination-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 5px 12px; /* Reduced padding */
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px; /* Set a fixed width */
+  height: 36px; /* Set a fixed height */
+}
+
+/* Disabled button style */
+.pagination-btn:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+/* Pagination arrow icon */
+.pagination-arrow {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Page info text */
+.pagination-info {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Reply Button Container */
+.reply-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Reply Button */
+.reply-button {
+  width: 40%;
+  background-color: #28a745; /* Green color for the button */
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the reply button */
+.reply-button:hover {
+  background-color: #218838; /* Darker green when hovering */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Focus effect for the reply button */
+.reply-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue outline on focus */
+}
+
+/* Disabled state for the reply button */
+.reply-button:disabled {
+  background-color: #c8e6c9; /* Light green for disabled state */
+  cursor: not-allowed;
+}
+
+/* Reply Popup */
+.reply-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.reply-popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.reply-message-input {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  resize: none;
+  font-family: Arial, sans-serif;
+  max-length: 1000; /* Limit character length */
+
+}
+.character-count {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+.reply-popup-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reply-send-btn,
+.reply-cancel-btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.reply-send-btn:hover,
+.reply-cancel-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.reply-cancel-btn {
+  background-color: #f44336;
+}
+
+.reply-cancel-btn:hover {
+  background-color: #d32f2f;
+}
+
+.reply-send-btn:disabled,
+.reply-cancel-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.reply-note {
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.manage-logs-row {
+  cursor: pointer; /* Indicate that the row is clickable */
+}

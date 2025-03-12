@@ -1,0 +1,117 @@
+.trigger-campaign-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .trigger-campaign-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .trigger-campaign-list,
+  .trigger-campaign-contacts {
+    margin-bottom: 20px;
+  }
+  
+  .trigger-campaign-subtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .trigger-campaign-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .trigger-campaign-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .trigger-campaign-item-selected {
+    background-color: #cce5ff;
+    border-color: #007bff;
+  }
+  
+  .trigger-campaign-phone-numbers {
+    margin-top: 20px;
+  }
+  
+  .trigger-campaign-expand-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .trigger-campaign-expand-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .trigger-campaign-numbers-list {
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  
+  .trigger-campaign-contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .trigger-campaign-contact-item label {
+    margin-left: 8px;
+    cursor: pointer;
+    
+  }
+  
+  .trigger-campaign-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .trigger-campaign-button:hover {
+    background-color: #0056b3;
+  }
+  .trigger-campaign-scrollableTable {
+    max-height: 300px;  /* Adjust the max height based on your requirements */
+    overflow-y: auto;   /* Enable vertical scrolling */
+  }
+  
+  .trigger-campaign-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .trigger-campaign-table th {
+    background-color: #f1f1f1;  /* Make the header distinguishable */
+    position: sticky;  /* Make the header sticky */
+    top: 0;  /* Stick the header to the top */
+    z-index: 1;  /* Ensure the header stays on top of the table content */
+    text-transform: none;  /* Remove text-transform for headers */
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .trigger-campaign-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }

@@ -1,0 +1,210 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #d7e1ec, #f7f7f7);
+}
+
+/* Main Container */
+.using-excel-upload {
+  background: linear-gradient(145deg, #ffffff, #e6e9f0);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 61, 148, 0.15);
+  max-width: 800px;
+  margin: 50px auto;
+  transition: transform 0.3s ease;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+h3 {
+  color: #003d94;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Form Row and Group Styling */
+.form-row, .form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+select, input[type="file"], button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+select:focus, input[type="file"]:focus {
+  outline: none;
+  border-color: #003d94;
+  box-shadow: 0 0 8px rgba(0, 61, 148, 0.2);
+}
+
+#download-template-button {
+  background: linear-gradient(135deg, #003d94, #005bb5);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-right: 10px; /* Ensure space between buttons */
+  width: 48%; /* Set width */
+  display: inline-block;
+}
+
+#download-template-button:hover {
+  background: linear-gradient(135deg, #002c6c, #003d94);
+  transform: scale(1.03);
+}
+
+#download-template-button:active {
+  transform: scale(0.97);
+}
+
+button {
+  background: linear-gradient(135deg, #003d94, #005bb5);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  padding: 10px;
+  transition: background 0.3s ease;
+  width: 48%; /* Set width */
+  margin-top: 10px; /* Small top margin */
+  display: inline-block; /* Align buttons side by side */
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #002c6c, #003d94);
+}
+
+.error {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* File Upload Section */
+.upload-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.upload-section button {
+  display: inline-block;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Table Styling */
+.excel-data {
+  margin-top: 30px;
+  background: linear-gradient(145deg, #ffffff, #f0f4f9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 61, 148, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+
+th, td {
+  padding: 9px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  padding: 10px;
+  text-transform: none;
+  background: #003d94;
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  background: #f9fbfc;
+}
+
+td:hover {
+  background: rgba(0, 61, 148, 0.1);
+}
+
+/* Limit table height to display only 4 rows and make it scrollable */
+.contacts-list table tbody {
+  display: block;
+  height: calc(4 * 45px);
+  overflow-y: auto;
+  text-transform: none;
+}
+
+.contacts-list table thead, .contacts-list table tbody tr {
+  text-transform: none; /* Corrected text-transform property */
+  text-align: left;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.contacts-list table th, .contacts-list table td {
+  padding: 8px; /* Reduced padding */
+  text-align: left;
+}
+
+.contacts-list table thead {
+  background: #003d94;
+  text-align: left;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  width: 48%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Additional Animations */
+.action-buttons button:hover {
+  transform: scale(1.03);
+}
+
+.action-buttons button:active {
+  transform: scale(0.97);
+}

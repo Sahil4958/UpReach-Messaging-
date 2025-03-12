@@ -1,0 +1,228 @@
+/* Dashboard Container */
+.dashboard-container {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 1200px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+  transition: all 0.3s ease-in-out;
+}
+
+.dashboard-container:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Heading */
+h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Metrics Container Box */
+.metrics-container-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Metric Card */
+.metric-card {
+  background: linear-gradient(145deg, #f8f9fa, #e0e4f1);
+  color: #2c3e50;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.metric-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.metric-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.metric-card p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3498db;
+}
+
+/* Total Cost Card */
+.total-cost {
+  grid-column: span 1;
+  background: linear-gradient(135deg, #56c3a7, #6bdabf);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.total-cost:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.total-cost h3 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.total-cost p {
+  font-size: 32px;
+  margin: 5px 0 15px;
+  font-weight: 700;
+}
+
+/* Line Graph */
+.line-graph {
+  margin-top: 15px;
+  height: 150px;
+  background: linear-gradient(135deg, #1f1f30, #3a3a50);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Trend Charts */
+.trend-charts {
+  margin-top: 60px;
+}
+
+.trend-charts h3 {
+  color: #2c3e50;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.chart-card {
+  width: 48%;
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* SMS Messages Table */
+.sms-messages {
+  margin-top: 60px;
+}
+
+.sms-messages table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sms-messages th,
+.sms-messages td {
+  padding: 16px;
+  border: 1px solid #ddd;
+}
+
+.sms-messages th {
+  background-color: #0b0996;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sms-messages td {
+  color: #555;
+  font-size: 16px;
+  text-align: center;
+}
+
+.sms-messages tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.sms-messages tr:hover {
+  background-color: #eaf1f8;
+  transition: background-color 0.3s ease;
+}
+
+/* Loading Animation */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.loading-animation {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+  color: #3498db;
+  animation: typing 2.5s steps(30, end) infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .metrics-container-box {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container {
+    flex-direction: column;
+  }
+
+  .chart-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sms-messages table {
+    font-size: 14px;
+  }
+}

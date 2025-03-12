@@ -1,0 +1,310 @@
+/* Full-screen background with animated gradient */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #4b6cb7, #182848);
+  background-size: 400% 400%;
+  position: relative;
+  overflow: hidden;
+  animation: gradientShift 12s ease infinite;
+  padding: 10px;
+}
+
+/* Animated Background Effect */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered login box with sharp clarity */
+.login-box {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 680px;
+  min-height: 450px;
+  background: rgba(2, 17, 223, 0.95); /* Less transparency to reduce blur */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Entrance animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Left column - Brand theme */
+.left-column {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+
+.brand-theme {
+  text-align: center;
+  max-width: 340px;
+}
+
+.brand-theme h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  text-shadow: 0px 2px 6px rgba(0, 255, 255, 0.5);
+}
+
+.brand-theme p {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Floating SMS Icon */
+.message-icon {
+  font-size: 52px;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Right column - Login form area */
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  position: relative;
+}
+
+/* Remove excessive blur for mobile */
+.right-column::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px); /* Reduced blur */
+  z-index: -1;
+}
+
+/* Login Form Container */
+.login-form {
+  margin-top: 0px; /* Adjust this value as needed */
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #333;
+}
+
+/* Register Form Container */
+.register-form {
+  margin-top: -30px; /* Adjust this value as needed */
+  max-width: 320px;
+  width: 100%;
+  text-align: center;
+}
+
+.register-form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #333;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.9); /* Increased contrast */
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+  outline: none;
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(106, 17, 203, 0.4);
+}
+
+/* Responsive Fixes */
+
+/* Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .login-box {
+    flex-direction: column;
+    max-width: 85%;
+  }
+  .left-column, .right-column {
+    width: 100%;
+    padding: 30px;
+  }
+  .brand-theme h1 {
+    font-size: 32px;
+  }
+  .brand-theme p {
+    font-size: 15px;
+  }
+  .message-icon {
+    font-size: 48px;
+  }
+}
+
+/* Standard Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .login-page {
+    padding: 15px;
+  }
+  .login-box {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .left-column, .right-column {
+    padding: 20px;
+  }
+  .right-column::before {
+    backdrop-filter: blur(3px); /* Further reduced blur */
+  }
+  .brand-theme h1 {
+    font-size: 28px;
+  }
+  .brand-theme p {
+    font-size: 14px;
+  }
+  .message-icon {
+    font-size: 42px;
+  }
+  .login-form h2,
+  .register-form h2 {
+    font-size: 24px;
+  }
+  .form-group input, .login-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .login-page {
+    padding: 10px;
+  }
+  .login-box {
+    border-radius: 10px;
+  }
+  .left-column, .right-column {
+    padding: 15px;
+  }
+  .brand-theme h1 {
+    font-size: 24px;
+  }
+  .brand-theme p {
+    font-size: 13px;
+  }
+  .message-icon {
+    font-size: 38px;
+  }
+  .login-form h2,
+  .register-form h2 {
+    font-size: 22px;
+  }
+  .form-group input, .login-button {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* --- Flip Card for Login/Register Forms --- */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+/* The back of the card is rotated so it shows correctly when flipped */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Toggle link styling for switching forms */
+.toggle-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.toggle-link span {
+  color: #2575fc;
+  cursor: pointer;
+  text-decoration: underline;
+}

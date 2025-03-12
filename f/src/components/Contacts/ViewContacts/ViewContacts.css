@@ -1,0 +1,177 @@
+/* View Contacts Table Styling */
+.view-contacts {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .view-contacts h3 {
+    text-align: center;
+    color: #003d94;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .table1-container {
+    height: 650px; /* Adjust to suit your content */
+    overflow-y: auto;  /* Enables vertical scrolling */
+  }
+  
+  .view-contacts table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+  .view-contacts th {
+    text-transform: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #003d94;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 12px 15px;
+}
+  
+  .view-contacts th,
+  .view-contacts td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+    text-transform: none;
+  }
+  
+  .view-contacts th {
+    background-color: #003d94;
+    color: white;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .view-contacts td {
+    background-color: #f9f9f9;
+  }
+  
+  .view-contacts tr:nth-child(even) td {
+    background-color: #f0f0f0;
+  }
+  
+  .view-contacts tr:hover td {
+    background-color: #e0e0e0;
+  }
+  
+  .view-contacts td,
+  .view-contacts th {
+    text-align: center;
+  }
+  /* ViewContacts.css */
+
+.customer-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.customer-dropdown label {
+  font-size: 18px;
+  color: #333;
+  font-weight:bold;
+  margin-bottom: 8px; 
+  align-content: flex-start;/* Space between label and dropdown */
+}
+
+.customer-dropdown select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 250px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.customer-dropdown select:focus {
+  border-color: #4a90e2;
+  outline: none;
+  background-color: #fff;
+}
+
+.customer-dropdown select:hover {
+  border-color: #999;
+}
+
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .view-contacts table {
+      font-size: 12px;
+    }
+  
+    .view-contacts th,
+    .view-contacts td {
+      padding: 8px;
+    }
+  }
+ /* Search bar container */
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Input field styling */
+.search-bar input {
+  width: 100%;
+  max-width: 500px; /* Controls the maximum width of the input */
+  padding: 12px 40px 12px 20px; /* Added padding for icon */
+  font-size: 16px;
+  border: 1px solid #ddd; /* Light border color for a soft look */
+  border-radius: 30px; /* Rounded corners for a more modern look */
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Dark text for contrast */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  box-sizing: border-box;
+}
+
+/* Focus state for input */
+.search-bar input:focus {
+  border-color: #007bff; /* Blue border when focused */
+  background-color: #fff; /* White background on focus */
+  outline: none; /* Removes the default focus outline */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Soft blue glow effect */
+}
+
+/* Search icon inside the input field */
+.search-bar input::placeholder {
+  color: #888; /* Lighter color for placeholder text */
+}
+
+/* Search icon container */
+.search-bar .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888; /* Gray color for the icon */
+}
+
+/* Styling for the search icon */
+.search-bar .search-icon svg {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,368 @@
+/* Main container */
+.side-tab-panel {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #e2e2e2, #f9f9f9);
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #021b79, #0575e6);
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+  transition: width 0.4s ease, transform 0.4s ease;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Desktop Sidebar States */
+.tabs.expanded {
+  width: 176px; /* Expanded state width (desktop) */
+}
+
+.tabs.collapsed {
+  width: 68px; /* Collapsed state width (desktop) */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  color: #ecf0f1;
+}
+
+.tabs.collapsed .sidebar-header {
+  flex-direction: column;
+}
+
+.brand-name1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+/* Toggle Button */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+
+.toggle-button:hover {
+  color: #ffffff;
+}
+
+/* Main Tabs */
+.tab {
+  padding: 12px 16px;
+  color: #ecf0f1;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.4s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* Sub-tabs (Contacts & Campaigns) */
+.contacts-sub-tabs,
+.campaigns-sub-tabs {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Sub-tab Styling */
+.sub-tab {
+  padding: 8px 16px;
+  font-size: 12px;
+  color: #d0d0d0;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.sub-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.sub-tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sub-tab-icon {
+  margin-right: 8px;
+  color: #d0d0d0;
+}
+
+/* Toggle Text Display for Tabs & Sub-tabs */
+.tabs.collapsed .sub-tab .first-letter,
+.tabs.collapsed .tab .first-letter {
+  display: inline;
+}
+
+.tabs.expanded .sub-tab .first-letter,
+.tabs.expanded .tab .first-letter {
+  display: none;
+}
+
+.tabs.collapsed .sub-tab .full-text,
+.tabs.collapsed .tab .full-text {
+  display: none;
+}
+
+.tabs.expanded .sub-tab .full-text,
+.tabs.expanded .tab .full-text {
+  display: inline;
+}
+
+/* Adjustments for Collapsed State (Center icons) */
+.tabs.collapsed .sub-tab,
+.tabs.collapsed .tab {
+  justify-content: center;
+}
+
+/* Logout Section */
+.logout-container {
+  margin-top: auto;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e2e2e2;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-container:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.logout-icon {
+  font-size: 16px;
+  color: #e2e2e2;
+  margin-right: 8px;
+}
+
+.logout-container:hover .logout-icon {
+  color: #ffffff;
+}
+
+.logout-text {
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.tabs.collapsed .logout-text {
+  display: none;
+}
+
+/* Profile Button & Menu */
+.profile-button-container {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ecedee;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-button-container:hover {
+  background-color: #acb3ba;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-button-container:hover .profile-icon {
+  transform: scale(1.1);
+}
+
+.profile-menu {
+  position: absolute;
+  top: 40px;
+  right: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  width: 184px;
+  margin-top: 24px;
+  margin-right: 8px;
+  padding: 10px 0;
+  z-index: 1099;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.profile-menu-item {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-menu-item:hover {
+  background-color: #f1f1f1;
+  color: #021b79;
+  width: 87%;
+  text-align: left;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 14px;
+  color: #003d94;
+  margin-bottom: 4px;
+}
+
+.email {
+  font-size: 11px;
+  color: gray;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 24px 32px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  overflow-y: auto;
+  margin-left: 176px; /* Default for desktop expanded sidebar */
+  transition: margin-left 0.4s ease;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* When sidebar is collapsed on desktop */
+.tabs.collapsed ~ .content {
+  margin-left: 68px;
+}
+
+/* User Info Overlay */
+.user-info-overlay {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 1000;
+  text-align: center;
+}
+
+.user-info-text {
+  color: #333;
+}
+
+/* ---------------------- */
+/* Responsive Adjustments */
+/* ---------------------- */
+
+/* For tablets and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Sidebar always shows in minimized (icon-only) state by default */
+  .tabs {
+    width: 68px;
+    transform: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  /* When toggled to expanded, overlay the sidebar */
+  .tabs.expanded {
+    width: 220px;
+    position: absolute;
+    z-index: 2000;
+  }
+  /* Content margin adjusts based on sidebar state */
+  .tabs.expanded ~ .content {
+    margin-left: 220px;
+  }
+  .tabs.collapsed ~ .content {
+    margin-left: 68px;
+  }
+  /* Reduce padding in content area for smaller screens */
+  .content {
+    padding: 20px;
+    height: 100%;
+  }
+  /* Optionally hide the user info overlay */
+  .user-info-overlay {
+    display: none;
+  }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .brand-name1 {
+    font-size: 14px;
+  }
+  .tab {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .sub-tab {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .profile-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .profile-menu {
+    width: 160px;
+  }
+  .content {
+    padding: 16px;
+    font-size: 13px;
+  }
+}

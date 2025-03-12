@@ -1,0 +1,157 @@
+/* CampaignLogs.module.css */
+/* CampaignLogs.module.css */
+
+/* Other styles remain unchanged */
+
+/* Search Bar */
+.searchContainer {
+    width: '50%';
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .searchInput {
+    width: 50%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+  }
+  
+  .searchInput:focus {
+    width: '50%';
+
+    outline: none;
+    border-color: #091175;
+  }
+  
+/* Main Container */
+.container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8faff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 42px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* Campaign List */
+  .campaignList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Table Header */
+  .tableHeader {
+    padding: 12px;
+    background-color: #091175;
+    color: #ffffff;
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: none;
+    z-index: 1; /* Ensure header is above the table content */
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Row */
+  .row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .row:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Cell */
+  .cell {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    text-align: left ;
+  }
+  
+  /* Status */
+  .statusPending {
+    color: #27ae60; /* Green */
+    font-weight: 600;
+  }
+  
+  .statusExpired {
+    color: #e74c3c; /* Red */
+    font-weight: 600;
+  }
+  
+  /* Expanded Row */
+  .expandedRow {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Expanded Row Title */
+  .expandedRowTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contactsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
+  /* Contact Cell */
+  .contactCell {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  /* Button */
+  .triggerButton {
+    width: 40%;
+    display: block;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .triggerButton:hover {
+    background: linear-gradient(90deg, #0056b3, #00408a);
+  }

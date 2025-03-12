@@ -1,0 +1,153 @@
+/* General form container */
+.create-user-form {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title style */
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-title span {
+    font-weight: normal;
+    color: #666;
+  }
+  
+  /* Input fields */
+  .form-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .form-input::placeholder {
+    color: #bbb;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Label style for inputs */
+  .input-label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn:active {
+    background-color: #003f7f;
+  }
+  
+  /* Success and error messages */
+  .message {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .message.success {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .message.error {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Access restricted message */
+  .access-restricted {
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    padding: 20px;
+  }
+ .toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50; /* Green background for success */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 9999;
+  width: 400px;  /* Increased width for the popup */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+  display: flex;
+  justify-content: space-between;  /* Align text and button */
+  align-items: center;
+}
+
+.toast.error {
+  background-color: #f44336; /* Red background for error */
+}
+
+.toast-close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toast-close-btn:hover {
+  background: transparent;  /* Make the background transparent on hover */
+  color: lightgray; /* Change text color on hover */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
